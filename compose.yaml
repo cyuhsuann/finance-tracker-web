@@ -20,6 +20,9 @@ services:
       - DEBUG=True
     depends_on:
       - db
+    volumes:
+      - ./backend:/app
+      - /app/.venv
 
   frontend:
     build: ./frontend
