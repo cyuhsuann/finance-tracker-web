@@ -6,10 +6,10 @@ ENV PDM_CHECK_UPDATE=false
 WORKDIR /app
 COPY pyproject.toml pdm.lock ./
 
-RUN pdm install --prod --no-editable --no-self
+RUN pdm install --no-editable --no-self
 
 COPY . .
-RUN pdm install --prod --no-editable
+RUN pdm install --no-editable
 
 FROM python:3.12-slim
 
