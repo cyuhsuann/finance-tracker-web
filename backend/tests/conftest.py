@@ -16,6 +16,7 @@ def user(django_user_model):
 
 @pytest.fixture
 def auth_client(client, user):
+    client = APIClient()
     client.force_authenticate(user=user)
     return client
 
