@@ -57,4 +57,4 @@ jobs:
           DATABASE_URL: postgresql://postgres:postgres@localhost:5432/finance_tracker
           DEBUG: True
           SECRET_KEY: "ci-secret-key-not-for-production"
-        run: pdm run python -m pytest tests/-v
+        run: pdm run python -m pytest tests/ -v
